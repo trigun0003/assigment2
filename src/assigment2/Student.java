@@ -84,11 +84,19 @@ public class Student {
              
         return true;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 83 * hash + Objects.hashCode(this.name);
+        hash = 83 * hash + Objects.hashCode(this.id);
+        return hash;
+    }
      
     @Override
       public String toString(){
           
-        return null;
-        
+        return ("{\"Name\":\""+name+"\",\"Id\":\""+id+"\",\"Gender\":\""+gender+"\",\"Grade\":"+grade+"}");
+         
       }  
 }
