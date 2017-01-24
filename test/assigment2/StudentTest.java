@@ -44,7 +44,7 @@ public class StudentTest {
     public void testNoArgumentStudentConstructor(){
         Student instance = new Student();
         boolean expResult = true;
-        boolean result = instance.getName()=="" && instance.getId()=="" && instance.getGender()=="" && instance.getGrade()==0;
+        boolean result = instance.getName().equals("") && instance.getId().equals("") && instance.getGender().equals("") && instance.getGrade()==0;
         assertEquals(expResult, result);
     }
     
@@ -55,7 +55,7 @@ public class StudentTest {
     public void testFullStudentConstructor(){
         Student instance = new Student("Bob","c123456","male",89.5);
         boolean expResult = true;
-        boolean result = instance.getName()=="Bob" && instance.getId()=="c123456" && instance.getGender()=="male" && instance.getGrade()==89.5;
+        boolean result = instance.getName().equals("Bob") && instance.getId().equals("c123456") && instance.getGender().equals("male") && instance.getGrade()==89.5;
         assertEquals(expResult, result);
     }
     /**
