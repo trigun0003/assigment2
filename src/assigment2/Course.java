@@ -16,18 +16,19 @@ import java.util.Set;
  */
 public class Course {
     
-     List<Student> students;
+     private List<Student> students;
 
-    public void Course() {
+    public Course() {
 
     }
 
-    public void Course(List<Student> students) {
-
+    public Course(List<Student> students) {
+        this.students = students;
     }
 
     public void add(Student student) {
-
+        
+        this.students.add(student);
     }
 
     public void remove(Student student) {
@@ -56,7 +57,7 @@ public class Course {
     }
 
     public List<Student> getAll() {
-        return null;
+        return this.students;
     }
 
     @Override

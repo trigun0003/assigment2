@@ -5,6 +5,9 @@
  */
 package assigment2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author c0687631
@@ -17,6 +20,15 @@ public class Assigment2 {
     public static void main(String[] args) {
         // TODO code application logic here
         //TEST
+        
+        Student nms2 = new Student("test", "testid", "testgender", 9999);
+        
+        Course instance = new Course();
+        
+       
+        System.out.println(instance.getAll());
+        
+        
     }
     
 }
