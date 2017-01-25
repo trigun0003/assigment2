@@ -22,9 +22,17 @@ public class Assigment2 {
         //TEST
         
         Student nms2 = new Student("test", "testid", "testgender", 9999);
+        Student nms3 = new Student("test2", "testid22", "testgender", 9999);
+        
+       
         
         Course instance = new Course();
         
+        instance.add(nms2);
+        instance.add(nms3);
+        
+        
+        instance.remove("testid22");
        
         System.out.println(instance.getAll());
         

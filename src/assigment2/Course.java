@@ -16,10 +16,10 @@ import java.util.Set;
  */
 public class Course {
     
-     private List<Student> students;
+     public List<Student> students;
 
     public Course() {
-
+        this.students = new ArrayList<>();
     }
 
     public Course(List<Student> students) {
@@ -32,11 +32,18 @@ public class Course {
     }
 
     public void remove(Student student) {
-
+            
+        this.students.remove(student);
     }
 
     public void remove(String id) {
-
+        for (Student student : students) {
+            if(student.getId().contains(id))
+            {
+                this.students.remove(student);
+            }
+        }
+        
     }
 
     public void remove(int position) {
@@ -48,6 +55,7 @@ public class Course {
     }
 
     public Student get(String id) {
+        
         return null;
 
     }
