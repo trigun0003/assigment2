@@ -16,26 +16,34 @@ import java.util.Set;
  */
 public class Course {
     
-     List<Student> students;
+     public List<Student> students;
 
-    public void Course() {
-
+    public Course() {
+        this.students = new ArrayList<>();
     }
 
-    public void Course(List<Student> students) {
-
+    public Course(List<Student> students) {
+        this.students = students;
     }
 
     public void add(Student student) {
-
+        
+        this.students.add(student);
     }
 
     public void remove(Student student) {
-
+            
+        this.students.remove(student);
     }
 
     public void remove(String id) {
-
+        for (Student student : students) {
+            if(student.getId().contains(id))
+            {
+                this.students.remove(student);
+            }
+        }
+        
     }
 
     public void remove(int position) {
@@ -47,6 +55,7 @@ public class Course {
     }
 
     public Student get(String id) {
+        
         return null;
 
     }
@@ -56,7 +65,7 @@ public class Course {
     }
 
     public List<Student> getAll() {
-        return null;
+        return this.students;
     }
 
     @Override
