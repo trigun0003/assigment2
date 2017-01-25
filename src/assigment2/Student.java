@@ -19,6 +19,10 @@ public class Student {
     private double grade;
     
     public Student(){
+        name = "";
+        id = "";
+        gender = "";
+        grade = 0;
         
     }
 
