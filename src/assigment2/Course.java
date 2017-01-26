@@ -9,14 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import sun.security.jca.GetInstance;
 
 /**
  *
  * @author Nisarg
  */
 public class Course {
-    
-     public List<Student> students;
+
+    public List<Student> students;
 
     public Course() {
         this.students = new ArrayList<>();
@@ -27,35 +28,36 @@ public class Course {
     }
 
     public void add(Student student) {
-        
+
         this.students.add(student);
     }
 
     public void remove(Student student) {
-            
+
         this.students.remove(student);
     }
 
     public void remove(String id) {
         for (Student student : students) {
-            if(student.getId().contains(id))
-            {
+            if (student.getId().contains(id)) {
                 this.students.remove(student);
             }
         }
-        
+
     }
 
     public void remove(int position) {
 
+        this.students.remove(position);
+
     }
 
     public void insert(Student student, int position) {
-
+        
     }
 
     public Student get(String id) {
-        
+
         return null;
 
     }
@@ -85,5 +87,5 @@ public class Course {
     public Map<String, Set<Student>> getGradeMap() {
         return null;
     }
-    
+
 }
