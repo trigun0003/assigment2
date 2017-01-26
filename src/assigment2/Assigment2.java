@@ -32,7 +32,7 @@ public class Assigment2 {
         instance.add(nms3);
         
         
-        instance.remove("testid22");
+        instance.remove(1);
        
         System.out.println(instance.getAll());
         

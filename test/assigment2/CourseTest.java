@@ -10,6 +10,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import jdk.nashorn.internal.parser.JSONParser;
+import org.json.simple.JSONObject;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -306,6 +308,16 @@ public class CourseTest {
         assertEquals(expResult, result);
     }
     
+    @Test
+    public void testToString() {
+        try {
+            Student instance = new Student("Bill Smith", "c0123456", "male", 89.3);
+            JSONObject expResult = (JSONObject) new JSONParser().parse("{\"name\":\"Bill Smith\",\"id\":\"c0123456\"},\"gender\":\"male\",\"grade\":\"89.3}");
+            JSONObject result = (JSONObject) new JSONParser().parse(instance.toString());
+            assertEquals(expResult, result);
+        } catch (ParseException ex) {
+            fail("One of the JSON Objects is invalid JSON. Go to jsonlint.com to find out why.");
+        }
     
     
     
